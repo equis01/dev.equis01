@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://evazquez.me/img/logo/x%3D.png">
+  <meta name="description" content="EquisX01 - Desarrollo web profesional. Sitios web, sistemas inteligentes e invitaciones digitales que convierten visitantes en clientes.">
+  <title>EquisX01 | Desarrollo Web Profesional</title>
+  <link rel="stylesheet" href="assets/css/estilos.css">
+  <link rel="stylesheet" href="assets/css/loader.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- NUEVO LOADER -->
+  <div id="loader">
+    <div class="body">
+      <span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <div class="base">
+        <span></span>
+        <div class="face"></div>
+      </div>
+    </div>
+    <div class="longfazers">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <h1 class="loading-text">Cargando experiencias...</h1>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="https://evazquez.me/img/logo/x%3D.png" alt="EquisX01">
+      <span>EquisX01</span>
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="menu">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="pages/servicios.html">Servicios</a></li>
+      <li><a href="pages/portfolio.html">Portfolio</a></li>
+      <li><a href="pages/sobre-mi.html">Sobre Mí</a></li>
+      <li><a href="pages/contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header id="inicio" class="hero">
+    <h1>Desarrollo Web que <span class="highlight">Convierte</span></h1>
+    <p>Transformo ideas en sitios web profesionales que generan resultados reales. Más de 50 proyectos exitosos respaldan mi experiencia.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="number">5+</span>
+        <span class="label">Proyectos</span>
+      </div>
+      <div class="stat">
+        <span class="number">100%</span>
+        <span class="label">Satisfacción</span>
+      </div>
+      <div class="stat">
+        <span class="number">24h</span>
+        <span class="label">Respuesta</span>
+      </div>
+    </div>
+    <a href="pages/servicios.html" class="btn-cta">Empezar Mi Proyecto</a>
+  </header>
+
+  <!-- VALUE PROPOSITION -->
+  <section class="value-proposition">
+    <div class="container">
+      <h2>¿Por qué elegir EquisX01?</h2>
+      <div class="benefits">
+        <div class="benefit">
+          <div class="icon">⚡</div>
+          <h3>Entrega Rápida</h3>
+          <p>Tu sitio web listo en 7-14 días, sin comprometer la calidad.</p>
+        </div>
+        <div class="benefit">
+          <div class="icon">💰</div>
+          <h3>ROI Garantizado</h3>
+          <p>Sitios web que se pagan solos generando más clientes y ventas.</p>
+        </div>
+        <div class="benefit">
+          <div class="icon">🎯</div>
+          <h3>100% Personalizado</h3>
+          <p>Cada proyecto diseñado específicamente para tu negocio y objetivos.</p>
+        </div>
+        <div class="benefit">
+          <div class="icon">📱</div>
+          <h3>Mobile First</h3>
+          <p>Optimizado para móviles donde está el 70% de tus clientes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS CON INFORMACIÓN REAL -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>Lo que dicen mis clientes</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Me gusta tu proactividad ya que no es de las que dura solo al inicio. Has demostrado ser constante y a base de interés y ganas de crecer, has resuelto y buscado por medio de herramientas como lograr más. Eso es MCViar."</p>
+          <div class="author">
+            <strong>Ricardo Saucedo</strong>
+            <span>Medios Con Valor</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Haces cosas que realmente necesitamos y con diseños increíbles"</p>
+          <div class="author">
+            <strong>Laura Martínez</strong>
+            <span>Cliente Particular - Invitaciones</span>
+          </div>
+        </div>
+        <div class="testimonial add-review">
+          <div class="add-review-content">
+            <div class="icon">➕</div>
+            <h3>¿Trabajaste conmigo?</h3>
+            <p>Comparte tu experiencia y ayuda a otros a conocer mi trabajo</p>
+            <button class="btn-add-review" onclick="openReviewModal()">Agregar Reseña</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL PARA AGREGAR RESEÑA CON ESTRELLAS MEJORADAS -->
+  <div id="reviewModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeReviewModal()">&times;</span>
+      <h2>Agregar Reseña</h2>
+      <form class="review-form" action="https://formsubmit.co/luis@evazquez.me" method="POST">
+        <input type="text" name="name" placeholder="Tu nombre completo" required>
+        <input type="text" name="company" placeholder="Empresa o proyecto (opcional)">
+        <div class="rating-input">
+          <label>Calificación:</label>
+          <div class="stars-input">
+            <input type="radio" name="rating" value="5" id="star5" required>
+            <label for="star5" data-rating="5">★</label>
+            <input type="radio" name="rating" value="4" id="star4">
+            <label for="star4" data-rating="4">★</label>
+            <input type="radio" name="rating" value="3" id="star3">
+            <label for="star3" data-rating="3">★</label>
+            <input type="radio" name="rating" value="2" id="star2">
+            <label for="star2" data-rating="2">★</label>
+            <input type="radio" name="rating" value="1" id="star1">
+            <label for="star1" data-rating="1">★</label>
+          </div>
+        </div>
+        <textarea name="review" rows="4" placeholder="Cuéntanos sobre tu experiencia trabajando conmigo..." required></textarea>
+        
+        <!-- Campo oculto para enviar estrellas como emojis -->
+        <input type="hidden" name="rating_emoji" id="ratingEmoji" value="">
+        
+        <!-- FormSubmit Settings -->
+        <input type="hidden" name="_subject" value="Nueva Reseña de Cliente - EquisX01">
+        <input type="hidden" name="_autoresponse" value="¡Muchas gracias por tu reseña! Tu opinión es muy valiosa para mí y me ayuda a seguir mejorando. Pronto la publicaré en mi sitio web. ¡Saludos! - Eduardo">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://dev.evazquez.me/">
+        
+        <button type="submit" class="btn-primary">Enviar Reseña</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>¿Listo para hacer crecer tu negocio?</h2>
+      <p>Agenda una llamada gratuita de 30 minutos y descubre cómo puedo ayudarte.</p>
+      <div class="cta-buttons">
+        <a href="pages/contacto.html" class="btn-primary">Agendar Llamada Gratis</a>
+        <a href="pages/portfolio.html" class="btn-secondary">Ver Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>EquisX01</h4>
+          <p>Desarrollo web profesional que genera resultados.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="pages/servicios.html">Servicios</a></li>
+            <li><a href="pages/portfolio.html">Portfolio</a></li>
+            <li><a href="pages/contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <p>📧 luis@evazquez.me</p>
+          <p>📱 +52 446 222 0020</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> EquisX01 - Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP BUTTON CON SVG CONFIABLE -->
+  <a href="https://wa.me/5214462220020" class="btn-whatsapp" target="_blank" title="WhatsApp">
+    <svg viewBox="0 0 24 24" width="35" height="35" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.488"/>
+    </svg>
+  </a>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

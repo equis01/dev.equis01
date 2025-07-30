@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Error | EquisX01</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="dots-loader">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index" class="logo">
+      <img src="https://evazquez.me/img/logo/x%3D.png" alt="EquisX01" style="height: 36px; vertical-align: middle;">
+      <span>EquisX01</span>
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="menu">
+      <li><a href="index#inicio">Inicio</a></li>
+      <li><a href="index#servicios">Servicios</a></li>
+      <li><a href="index#agendar">Agendar</a></li>
+      <li><a href="index#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Error Content -->
+  <main style="min-height: 70vh; display: flex; align-items: center; justify-content: center;">
+    <div class="error-container">
+      <div class="error-code">404</div>
+      <div class="error-message">¡Ups! La página que buscas no existe o no tienes acceso.</div>
+      <a href="index" class="btn-home">Volver al inicio</a>
+    </div>
+  </main>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/5214462220020" class="btn-whatsapp" target="_blank" aria-label="WhatsApp">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" style="background:#25D366; border-radius:50%; padding:6px;">
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 EquisX01 | Desarrollado por <a href="https://evazquez.me" target="_blank">Luis Vázquez</a>
+  </footer>
+
+  <!-- Script para loader y menú -->
+  <script>
+    window.addEventListener('load', function() {
+      document.getElementById('loader').classList.add('hide');
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.querySelector('.menu-toggle');
+      const menu = document.querySelector('.menu');
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
