@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://evazquez.me/img/logo/x%3D.png">
+  <meta name="description" content="Contacta con EquisX01 - Desarrollo web profesional. Agenda una llamada gratuita y comienza tu proyecto web.">
+  <title>Contacto | EquisX01</title>
+  <link rel="stylesheet" href="../assets/css/estilos.css">
+  <link rel="stylesheet" href="../assets/css/contacto.css">
+  <link rel="stylesheet" href="../assets/css/loader.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- NUEVO LOADER -->
+  <div id="loader">
+    <div class="body">
+      <span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <div class="base">
+        <span></span>
+        <div class="face"></div>
+      </div>
+    </div>
+    <div class="longfazers">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <h1 class="loading-text">Cargando experiencias...</h1>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="../index.html" class="logo">
+      <img src="https://evazquez.me/img/logo/x%3D.png" alt="EquisX01">
+      <span>EquisX01</span>
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="menu">
+      <li><a href="../index.html#inicio">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="sobre-mi.html">Sobre Mí</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO CONTACTO -->
+  <header class="hero" style="min-height: 50vh;">
+    <h1>Hablemos de tu <span class="highlight">Proyecto</span></h1>
+    <p>Agenda una llamada gratuita de 30 minutos y descubre cómo puedo ayudarte a crecer tu negocio con un sitio web profesional.</p>
+  </header>
+
+  <!-- SECCIÓN DE OPCIONES DE CONTACTO -->
+  <section class="contact-options">
+    <div class="container">
+      <h2>Elige cómo prefieres contactarme</h2>
+      <div class="contact-tabs">
+        <button class="tab-btn active" onclick="showTab('calendly')">📅 Agendar Llamada</button>
+        <button class="tab-btn" onclick="showTab('form')">✉️ Enviar Mensaje</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE CALENDLY -->
+  <section id="calendly-section" class="calendly-section active">
+    <div class="container">
+      <div class="calendly-container">
+        <h2>Agenda tu llamada gratuita</h2>
+        <p>Selecciona el día y hora que mejor te convenga para nuestra consulta inicial de 30 minutos.</p>
+        
+        <!-- Widget de Calendly -->
+        <div class="calendly-inline-widget" 
+             data-url="https://calendly.com/luis-evazquez/30min" 
+             style="min-width:320px;height:890px;">
+        </div>
+        
+        <!-- Fallback para cuando Calendly no carga -->
+        <div class="calendly-fallback" style="display: none;">
+          <div class="fallback-content">
+            <h3>¿Problemas para cargar el calendario?</h3>
+            <p>No te preocupes, puedes agendar tu llamada directamente:</p>
+            <a href="https://calendly.com/tu-usuario/30min" class="btn-primary" target="_blank">Abrir Calendly</a>
+            <p>O contáctame por WhatsApp para coordinar:</p>
+            <a href="https://wa.me/5214462220020" class="btn-secondary" target="_blank">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE CONTACTO (FORMULARIO) -->
+  <section id="form-section" class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- FORMULARIO DE CONTACTO -->
+        <div class="contact-form-container">
+          <h2>Envíame un mensaje</h2>
+          <p>Completa el formulario y me pondré en contacto contigo lo antes posible.</p>
+          
+          <form class="formulario-contacto" action="https://formsubmit.co/luis@evazquez.me" method="POST">
+            <div class="form-group">
+              <input type="text" name="nombre" placeholder="Nombre completo" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Correo electrónico" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="telefono" placeholder="Teléfono (opcional)">
+            </div>
+            <div class="form-group">
+              <select name="servicio" required>
+                <option value="" disabled selected>¿Qué servicio te interesa?</option>
+                <option value="sitio-web">Sitio Web</option>
+                <option value="tienda-online">Tienda Online</option>
+                <option value="sistema-web">Sistema Web</option>
+                <option value="invitacion-digital">Invitación Digital</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+            </div>
+            
+            <!-- FormSubmit Settings -->
+            <input type="hidden" name="_subject" value="Nuevo Contacto - EquisX01">
+            <input type="hidden" name="_autoresponse" value="¡Gracias por contactarme! He recibido tu mensaje y me pondré en contacto contigo lo antes posible. Mientras tanto, puedes revisar mi portfolio para ver algunos de mis trabajos anteriores.">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://dev.evazquez.me/gracias.html">
+            
+            <button type="submit" class="btn-primary">Enviar Mensaje</button>
+          </form>
+          
+          <div id="alertaEnvio" class="alerta-exito">
+            <p>¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.</p>
+          </div>
+        </div>
+        
+        <!-- INFORMACIÓN DE CONTACTO -->
+        <div class="contact-info">
+          <h2>Información de Contacto</h2>
+          <div class="info-item">
+            <div class="icon">📧</div>
+            <div class="details">
+              <h3>Email</h3>
+              <p><a href="mailto:luis@evazquez.me">luis@evazquez.me</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="icon">📱</div>
+            <div class="details">
+              <h3>WhatsApp</h3>
+              <p><a href="https://wa.me/5214462220020" target="_blank">+52 446 222 0020</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="icon">🕒</div>
+            <div class="details">
+              <h3>Horario</h3>
+              <p>Lunes a Viernes: 9am - 6pm</p>
+              <p>Sábados: 10am - 2pm</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="icon">⏱️</div>
+            <div class="details">
+              <h3>Tiempo de Respuesta</h3>
+              <p>Menos de 24 horas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>¿Cuánto tiempo toma desarrollar un sitio web?</h3>
+          <p>El tiempo de desarrollo varía según la complejidad del proyecto, pero generalmente entrego sitios web en 7-14 días sin comprometer la calidad.</p>
+        </div>
+        <div class="faq-item">
+          <h3>¿Cuál es tu proceso de trabajo?</h3>
+          <p>Mi proceso incluye: 1) Consulta inicial, 2) Propuesta y presupuesto, 3) Diseño, 4) Desarrollo, 5) Revisión y ajustes, 6) Lanzamiento y 7) Soporte posterior.</p>
+        </div>
+        <div class="faq-item">
+          <h3>¿Ofreces mantenimiento para sitios web?</h3>
+          <p>Sí, ofrezco planes de mantenimiento mensual que incluyen actualizaciones, respaldos, seguridad y pequeñas modificaciones.</p>
+        </div>
+        <div class="faq-item">
+          <h3>¿Puedo actualizar mi sitio web por mi cuenta?</h3>
+          <p>Dependiendo de la solución implementada, puedo desarrollar tu sitio con un CMS que te permita actualizar contenido fácilmente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>¿Listo para hacer crecer tu negocio?</h2>
+      <p>No esperes más para tener el sitio web que tu negocio merece.</p>
+      <div class="cta-buttons">
+        <button class="btn-primary" onclick="showTab('calendly')">Agendar Llamada Gratis</button>
+        <a href="portfolio.html" class="btn-secondary">Ver Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>EquisX01</h4>
+          <p>Desarrollo web profesional que genera resultados.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <p>📧 luis@evazquez.me</p>
+          <p>📱 +52 446 222 0020</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> EquisX01 - Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP BUTTON CON SVG CONFIABLE -->
+  <a href="https://wa.me/5214462220020" class="btn-whatsapp" target="_blank" title="WhatsApp">
+    <svg viewBox="0 0 24 24" width="35" height="35" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script src="../assets/js/script.js"></script>
+  
+  <!-- Script para las pestañas de contacto -->
+  <script>
+    function showTab(tabName) {
+      // Ocultar todas las secciones
+      document.getElementById('calendly-section').classList.remove('active');
+      document.getElementById('form-section').classList.remove('active');
+      
+      // Remover clase active de todos los botones
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      
+      // Mostrar la sección seleccionada
+      if (tabName === 'calendly') {
+        document.getElementById('calendly-section').classList.add('active');
+        document.querySelector('[onclick="showTab(\'calendly\')"]').classList.add('active');
+      } else {
+        document.getElementById('form-section').classList.add('active');
+        document.querySelector('[onclick="showTab(\'form\')"]').classList.add('active');
+      }
+    }
+    
+    // Detectar si Calendly no carga y mostrar fallback
+    setTimeout(function() {
+      const calendlyWidget = document.querySelector('.calendly-inline-widget');
+      const calendlyFallback = document.querySelector('.calendly-fallback');
+      
+      if (calendlyWidget && !calendlyWidget.querySelector('iframe')) {
+        calendlyWidget.style.display = 'none';
+        calendlyFallback.style.display = 'block';
+      }
+    }, 5000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://evazquez.me/img/logo/x%3D.png">
+  <meta name="description" content="Servicios de desarrollo web profesional - Sitios web, tiendas online, sistemas web e invitaciones digitales que convierten visitantes en clientes.">
+  <title>Servicios | EquisX01</title>
+  <link rel="stylesheet" href="../assets/css/estilos.css">
+  <link rel="stylesheet" href="../assets/css/services.css">
+  <link rel="stylesheet" href="../assets/css/contacto.css">
+  <link rel="stylesheet" href="../assets/css/loader.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- NUEVO LOADER -->
+  <div id="loader">
+    <div class="body">
+      <span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <div class="base">
+        <span></span>
+        <div class="face"></div>
+      </div>
+    </div>
+    <div class="longfazers">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <h1 class="loading-text">Cargando servicios...</h1>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="../index.html" class="logo">
+      <img src="https://evazquez.me/img/logo/x%3D.png" alt="EquisX01">
+      <span>EquisX01</span>
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="menu">
+      <li><a href="../index.html#inicio">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="sobre-mi.html">Sobre Mí</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SERVICIOS -->
+  <header class="hero">
+    <h1>Tienda de <span class="highlight">Servicios Digitales</span></h1>
+    <p>Elige el servicio perfecto para tu negocio. Precios transparentes, calidad garantizada y entrega rápida.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="number">2</span>
+        <span class="label">🔥Promociones</span>
+      </div>
+      <div class="stat">
+        <span class="number">4</span>
+        <span class="label">Servicios</span>
+      </div>
+      <div class="stat">
+        <span class="number">14</span>
+        <span class="label">Días</span>
+      </div>
+      <div class="stat">
+        <span class="number">100%</span>
+        <span class="label">Personalización</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVICIOS PRINCIPALES -->
+  <section class="services-main">
+    <div class="container">
+      <h2>🛍️ Catálogo de Servicios</h2>
+      <div class="services-grid">
+        <!-- Sitio Web -->
+        <div class="service-card">
+          <div class="service-icon">🌐</div>
+          <h3>Sitio Web Profesional</h3>
+          <p class="service-description">Sitios web modernos, rápidos y optimizados para convertir visitantes en clientes. Diseño responsive y SEO incluido.</p>
+          <ul class="service-features">
+            <li>✅ Diseño 100% personalizado</li>
+            <li>✅ Responsive (móvil, tablet, desktop)</li>
+            <li>✅ Optimización SEO básica</li>
+            <li>✅ Formularios de contacto</li>
+            <li>✅ Integración con redes sociales</li>
+            <li>✅ Certificado SSL incluido</li>
+          </ul>
+          <div class="service-price">
+            <span class="price-promo">🔥 PROMOCIÓN</span>
+            <div class="price-container">
+              <span class="price-original">$5,000 MXN</span>
+              <span class="price-current">$2,000 MXN</span>
+            </div>
+          </div>
+          <button class="btn-order" onclick="openOrderModal('sitio-web')">📋 Solicitar Cotización</button>
+        </div>
+
+        <!-- Sistema Web -->
+        <div class="service-card">
+          <div class="service-icon">⚙️</div>
+          <h3>Sistema Web</h3>
+          <p class="service-description">Aplicaciones web personalizadas para automatizar procesos de tu negocio. CRM, ERP, gestión de clientes, red social corporativa y más.</p>
+          <ul class="service-features">
+            <li>✅ Desarrollo a medida</li>
+            <li>✅ Base de datos personalizada</li>
+            <li>✅ Múltiples usuarios y roles</li>
+            <li>✅ Reportes y analytics</li>
+            <li>✅ API para integraciones</li>
+            <li>✅ Backup automático</li>
+          </ul>
+          <div class="service-price">
+            <span class="price-from">Desde</span>
+            <span class="price-current">$10,000 MXN</span>
+            <span class="price-monthly">o $250/mes por usuario</span>
+          </div>
+          <button class="btn-order" onclick="openOrderModal('sistema-web')">📋 Solicitar Cotización</button>
+        </div>
+
+        <!-- Invitación Digital -->
+        <div class="service-card featured">
+          <div class="service-badge">Más Popular</div>
+          <div class="service-icon">💌</div>
+          <h3>Invitación Digital</h3>
+          <p class="service-description">Invitaciones digitales elegantes para bodas, XV años, eventos corporativos. Interactivas y fáciles de compartir.</p>
+          <ul class="service-features">
+            <li>✅ Diseño único y personalizado</li>
+            <li>✅ Animaciones y efectos</li>
+            <li>✅ Confirmación de asistencia</li>
+            <li>✅ Galería de fotos</li>
+            <li>✅ Música de fondo</li>
+            <li>✅ Compartir en redes sociales</li>
+          </ul>
+          <div class="service-price">
+            <span class="price-promo">🔥 PROMOCIÓN</span>
+            <div class="price-container">
+              <span class="price-original">$800 MXN</span>
+              <span class="price-current">$400 MXN</span>
+            </div>
+          </div>
+          <button class="btn-order" onclick="openOrderModal('invitacion-digital')">📋 Solicitar Cotización</button>
+        </div>
+        <!-- Tienda Online -->
+        <div class="service-card">
+          <div class="service-icon">🛒</div>
+          <h3>Tienda Online</h3>
+          <p class="service-description">E-commerce completo para vender tus productos online. Gestión de inventario, pagos seguros y panel administrativo.</p>
+          <ul class="service-features">
+            <li>✅ Catálogo de productos ilimitado</li>
+            <li>✅ Carrito de compras avanzado</li>
+            <li>✅ Pasarelas de pago (PayPal, Stripe)</li>
+            <li>✅ Panel de administración</li>
+            <li>✅ Gestión de inventario</li>
+            <li>✅ Reportes de ventas</li>
+            <li>✅ Cupones y descuentos</li>
+          </ul>
+          <div class="service-price">
+            <span class="price-from">Precio fijo</span>
+            <span class="price-current">$7,000 MXN</span>
+          </div>
+          <button class="btn-order" onclick="openOrderModal('tienda-online')">📋 Solicitar Cotización</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL DE PEDIDO -->
+  <div id="orderModal" class="order-modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeOrderModal()">&times;</span>
+      <div class="modal-header">
+        <h2 id="modalTitle">📋 Solicitar Cotización</h2>
+        <p id="modalSubtitle">Completa la información para procesar tu pedido</p>
+      </div>
+      
+      <form class="order-form" action="https://formsubmit.co/luis@evazquez.me" method="POST">
+        <!-- Información del Cliente -->
+        <div class="form-section">
+          <h3>👤 Información del Cliente</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" name="nombre" placeholder="Nombre completo" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Correo electrónico" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="tel" name="telefono" placeholder="Teléfono" required>
+            </div>
+            <div class="form-group">
+              <input type="text" name="empresa" placeholder="Empresa (opcional)">
+            </div>
+          </div>
+        </div>
+
+        <!-- Detalles del Proyecto -->
+        <div class="form-section">
+          <h3>📋 Detalles del Proyecto</h3>
+          <div class="form-group">
+            <label>Servicio seleccionado:</label>
+            <input type="text" id="selectedService" name="servicio" readonly>
+          </div>
+          <div class="form-group">
+            <label>Describe tu proyecto:</label>
+            <textarea name="descripcion_proyecto" rows="4" placeholder="Cuéntanos qué necesitas, funcionalidades específicas, diseño preferido, etc." required></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Presupuesto aproximado:</label>
+              <select name="presupuesto" required>
+                <option value="" disabled selected>Selecciona tu presupuesto</option>
+                <option value="2000-5000">$2,000 - $5,000 MXN</option>
+                <option value="5000-10000">$5,000 - $10,000 MXN</option>
+                <option value="10000-20000">$10,000 - $20,000 MXN</option>
+                <option value="20000+">Más de $20,000 MXN</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Fecha límite:</label>
+              <input type="date" name="fecha_limite">
+            </div>
+          </div>
+        </div>
+
+        <!-- Funcionalidades Específicas -->
+        <div class="form-section">
+          <h3>⚡ Funcionalidades Específicas</h3>
+          <div class="checkbox-grid">
+            <label class="checkbox-item">
+              <input type="checkbox" name="funcionalidades[]" value="formulario-contacto">
+              <span>Formulario de contacto</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="funcionalidades[]" value="galeria-imagenes">
+              <span>Galería de imágenes</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="funcionalidades[]" value="blog">
+              <span>Blog/Noticias</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="funcionalidades[]" value="redes-sociales">
+              <input type="checkbox" name="funcionalidades[]" value="chat-online">
+              <span>Chat en línea</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="funcionalidades[]" value="multiidioma">
+              <span>Múltiples idiomas</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="funcionalidades[]" value="analytics">
+              <span>Google Analytics</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Información de Pago -->
+        <div class="form-section payment-info">
+          <h3>💳 Información de Pago</h3>
+          <div class="payment-details">
+            <p><strong>📋 Esquema de Pago:</strong></p>
+            <ul>
+              <li>✅ <strong>Anticipo:</strong> 25-30% para iniciar el proyecto</li>
+              <li>✅ <strong>Pago final:</strong> 70-75% al entregar el proyecto terminado</li>
+              <li>✅ <strong>Métodos:</strong> Transferencia bancaria, PayPal, Oxxo</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FormSubmit Settings -->
+        <input type="hidden" name="_subject" value="Nuevo Pedido - EquisX01">
+        <input type="hidden" name="_next" value="https://tu-dominio.com/gracias.html">
+        <input type="hidden" name="_captcha" value="false">
+        
+        <button type="submit" class="btn-submit-order">🚀 Enviar Pedido</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- PROCESO DE TRABAJO ACTUALIZADO -->
+  <section class="work-process">
+    <div class="container">
+      <h2>🔄 Nuestro Proceso de Trabajo</h2>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Consulta Inicial</h3>
+          <p>Conversamos sobre tu proyecto, objetivos y necesidades específicas.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Propuesta y Anticipo</h3>
+          <p>Te envío una propuesta detallada. Al aceptar, pagas el 25-30% de anticipo para iniciar.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Diseño y Prototipo</h3>
+          <p>Creo el diseño visual y la estructura de tu proyecto.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Desarrollo</h3>
+          <p>Programo tu sitio web o sistema con las mejores tecnologías.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">5</div>
+          <h3>Pruebas y Ajustes</h3>
+          <p>Realizamos pruebas exhaustivas y ajustes según tu feedback.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">6</div>
+          <h3>Entrega y Pago Final</h3>
+          <p>Entregamos tu proyecto terminado y recibes capacitación. Pagas el 70-75% restante.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECNOLOGÍAS -->
+  <section class="technologies">
+    <div class="container">
+      <h2>Tecnologías que Utilizo</h2>
+      <div class="tech-grid">
+        <div class="tech-category">
+          <h3>Frontend</h3>
+          <div class="tech-items">
+            <span class="tech-item">HTML5</span>
+            <span class="tech-item">CSS3</span>
+            <span class="tech-item">JavaScript</span>
+            <span class="tech-item">React</span>
+            <span class="tech-item">Vue.js</span>
+          </div>
+        </div>
+        <div class="tech-category">
+          <h3>Backend</h3>
+          <div class="tech-items">
+            <span class="tech-item">Node.js</span>
+            <span class="tech-item">PHP</span>
+            <span class="tech-item">Python</span>
+            <span class="tech-item">MySQL</span>
+            <span class="tech-item">MongoDB</span>
+          </div>
+        </div>
+        <div class="tech-category">
+          <h3>Herramientas</h3>
+          <div class="tech-items">
+            <span class="tech-item">WordPress</span>
+            <span class="tech-item">Shopify</span>
+            <span class="tech-item">Git</span>
+            <span class="tech-item">Figma</span>
+            <span class="tech-item">Adobe XD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SERVICIOS -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Preguntas Frecuentes sobre Servicios</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>¿Incluyes el hosting y dominio?</h3>
+          <p>Te ayudo a configurar el hosting y dominio, pero los costos son adicionales. Te recomiendo las mejores opciones según tu presupuesto.</p>
+        </div>
+        <div class="faq-item">
+          <h3>¿Haces modificaciones después de la entrega?</h3>
+          <p>Sí, incluyo 30 días de soporte gratuito para ajustes menores. Para cambios mayores, manejo tarifas preferenciales.</p>
+        </div>
+        <div class="faq-item">
+          <h3>¿Trabajas con pagos por etapas?</h3>
+          <p>Sí, manejo un esquema de pagos: 50% al iniciar el proyecto y 50% al finalizar. Para proyectos grandes, podemos dividir en más etapas.</p>
+        </div>
+        <div class="faq-item">
+          <h3>¿Qué pasa si no me gusta el resultado?</h3>
+          <p>Trabajo de cerca contigo durante todo el proceso para asegurar tu satisfacción. Incluyo revisiones ilimitadas hasta que estés 100% satisfecho.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>¿Listo para comenzar tu proyecto?</h2>
+      <p>Agenda una llamada gratuita de 30 minutos y descubre cómo puedo ayudarte a hacer crecer tu negocio.</p>
+      <div class="cta-buttons">
+        <a href="contacto.html" class="btn-primary">Agendar Llamada Gratis</a>
+        <a href="portfolio.html" class="btn-secondary">Ver Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>EquisX01</h4>
+          <p>Desarrollo web profesional que genera resultados.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <p>📧 luis@evazquez.me</p>
+          <p>📱 +52 446 222 0020</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> EquisX01 - Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP BUTTON -->
+  <a href="https://wa.me/5214462220020" class="btn-whatsapp" target="_blank" title="WhatsApp">
+    <svg viewBox="0 0 24 24" width="35" height="35" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.488"/>
+    </svg>
+  </a>
+
+  <script src="../assets/js/script.js"></script>
+  <script>
+    // Funciones para el modal de pedidos
+    function openOrderModal(serviceType) {
+      const modal = document.getElementById('orderModal');
+      const serviceInput = document.getElementById('selectedService');
+      const modalTitle = document.getElementById('modalTitle');
+      
+      const serviceNames = {
+        'sitio-web': 'Sitio Web Profesional',
+        'tienda-online': 'Tienda Online',
+        'sistema-web': 'Sistema Web',
+        'invitacion-digital': 'Invitación Digital'
+      };
+      
+      serviceInput.value = serviceNames[serviceType];
+      modalTitle.textContent = `🛒 Pedido: ${serviceNames[serviceType]}`;
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeOrderModal() {
+      const modal = document.getElementById('orderModal');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    
+    // Cerrar modal al hacer clic fuera
+    window.onclick = function(event) {
+      const modal = document.getElementById('orderModal');
+      if (event.target == modal) {
+        closeOrderModal();
+      }
+    }
+  </script>
+</body>
+</html>
