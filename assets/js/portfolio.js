@@ -239,7 +239,7 @@ function openProjectModal(projectId) {
   techContainer.innerHTML = project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('');
   
   // Actualizar enlace de demo
-  const demoBtn = document.getElementById('demoBtn');
+  const demoBtn = document.getElementById('modalLiveLink');
   if (project.liveUrl && project.liveUrl !== '#') {
     demoBtn.href = project.liveUrl;
     demoBtn.style.display = 'inline-block';
