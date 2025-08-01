@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Botón WhatsApp
     const whatsappShareBtn = document.getElementById('whatsappShareBtn');
     if (whatsappShareBtn) {
-        const whatsappText = encodeURIComponent(`¡Hola! Estás invitado/a a los XV Años de Ximena Vázquez. Aquí puedes ver tu invitación personal: ${currentInvitationUrl}`);
+        const whatsappText = encodeURIComponent(`¡Hola! Estás invitado/a a los XV Años de Isabella Morales. Aquí puedes ver tu invitación personal: https://dev.evazquez.me/pages/demos/xv-b&b`);
         whatsappShareBtn.href = `https://api.whatsapp.com/send?text=${whatsappText}`;
     }
 
