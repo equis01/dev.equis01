@@ -2,6 +2,8 @@
 
 // Datos de los proyectos
 const projectsData = {
+  /*
+  // PROYECTOS TEMPORALMENTE DESACTIVADOS - Descomentar cuando estén listos los demos
   'medios-con-valor': {
     title: 'Medios Con Valor',
     category: 'Sitio Web Corporativo',
@@ -142,6 +144,9 @@ const projectsData = {
     tech: ['HTML5', 'CSS3', 'JavaScript', 'GSAP'],
     liveUrl: '#'
   },
+  */
+  
+  // PROYECTOS ACTIVOS CON DEMOS DISPONIBLES
   'xv-princess': {
     title: 'XV Años Princess',
     category: 'Invitación Digital',
@@ -159,34 +164,32 @@ const projectsData = {
       'Compartido más de 500 veces',
       'Ahorro del 70% vs invitaciones tradicionales'
     ],
-    tech: ['CSS3', 'JavaScript', 'GSAP', 'Web Audio API'],
-    liveUrl: '#'
+    tech: ['CSS3', 'JavaScript', 'API Rest', 'HTML5'],
+    liveUrl: 'demos/xv-b&b'
   },
   'evento-corporativo': {
-    title: 'Evento Corporativo',
+    title: 'Evento Infantil',
     category: 'Invitación Digital',
-    description: 'Invitación profesional para evento empresarial con registro de asistentes, agenda del evento y networking.',
-    image: 'https://via.placeholder.com/600x400/00CEC9/FFFFFF?text=Evento+Corporativo',
+    description: 'Invitación profesional para evento infantil con registro de asistentes, agenda del evento.',
+    image: 'demos/hbd-3y.png',
     features: [
-      'Diseño corporativo profesional',
-      'Registro de asistentes automático',
-      'Agenda detallada del evento',
-      'Sistema de networking',
-      'Recordatorios automáticos'
+      'Diseño profesional',
+      'Registro de asistentes automático en tu hoja de cálculo',
+      'Agenda detallada del evento'
     ],
     results: [
       'Registro del 90% de invitados',
       'Mejora del 150% en asistencia',
       'Experiencia profesional destacada'
     ],
-    tech: ['React', 'TypeScript', 'API REST', 'Node.js'],
-    liveUrl: '#'
+    tech: ['HTML5', 'CSS3', 'JavaScript'],
+    liveUrl: 'demos/hbd-3y'
   }
 };
 
 // Filtrado de proyectos
 function filterProjects(category) {
-  const projects = document.querySelectorAll('.project-card');
+  const projectCards = document.querySelectorAll('.project-card');
   const filterBtns = document.querySelectorAll('.filter-btn');
   
   // Actualizar botones activos
@@ -194,18 +197,19 @@ function filterProjects(category) {
   document.querySelector(`[data-filter="${category}"]`).classList.add('active');
   
   // Filtrar proyectos
-  projects.forEach(project => {
-    if (category === 'all' || project.dataset.category === category) {
-      project.style.display = 'block';
+  projectCards.forEach(card => {
+    const cardCategory = card.dataset.category;
+    if (category === 'all' || cardCategory === category) {
+      card.style.display = 'block';
       setTimeout(() => {
-        project.style.opacity = '1';
-        project.style.transform = 'translateY(0)';
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
       }, 100);
     } else {
-      project.style.opacity = '0';
-      project.style.transform = 'translateY(20px)';
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
       setTimeout(() => {
-        project.style.display = 'none';
+        card.style.display = 'none';
       }, 300);
     }
   });
@@ -216,36 +220,41 @@ function openProjectModal(projectId) {
   const project = projectsData[projectId];
   if (!project) return;
   
-  const modal = document.getElementById('projectModal');
-  
-  // Llenar datos del modal
-  document.getElementById('modalImage').src = project.image;
-  document.getElementById('modalCategory').textContent = project.category;
+  // Actualizar contenido del modal
   document.getElementById('modalTitle').textContent = project.title;
+  document.getElementById('modalCategory').textContent = project.category;
   document.getElementById('modalDescription').textContent = project.description;
-  document.getElementById('modalLiveLink').href = project.liveUrl;
+  document.getElementById('modalImage').src = project.image;
   
-  // Llenar características
+  // Actualizar características
   const featuresList = document.getElementById('modalFeatures');
   featuresList.innerHTML = project.features.map(feature => `<li>${feature}</li>`).join('');
   
-  // Llenar resultados
+  // Actualizar resultados
   const resultsList = document.getElementById('modalResults');
   resultsList.innerHTML = project.results.map(result => `<li>${result}</li>`).join('');
   
-  // Llenar tecnologías
+  // Actualizar tecnologías
   const techContainer = document.getElementById('modalTech');
   techContainer.innerHTML = project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('');
   
+  // Actualizar enlace de demo
+  const demoBtn = document.getElementById('demoBtn');
+  if (project.liveUrl && project.liveUrl !== '#') {
+    demoBtn.href = project.liveUrl;
+    demoBtn.style.display = 'inline-block';
+  } else {
+    demoBtn.style.display = 'none';
+  }
+  
   // Mostrar modal
-  modal.style.display = 'block';
+  document.getElementById('projectModal').style.display = 'block';
   document.body.style.overflow = 'hidden';
 }
 
 // Cerrar modal de proyecto
 function closeProjectModal() {
-  const modal = document.getElementById('projectModal');
-  modal.style.display = 'none';
+  document.getElementById('projectModal').style.display = 'none';
   document.body.style.overflow = 'auto';
 }
 
@@ -254,20 +263,16 @@ function buyTemplate(projectId) {
   const project = projectsData[projectId];
   if (!project) return;
   
-  // Precio fijo para todas las plantillas
-  const price = 250; // MXN
+  let message = `Hola, me interesa la plantilla "${project.title}" de ${project.category}.`;
   
-  // Datos de Mercado Pago (credenciales de prueba)
-  const publicKey = 'TEST-459d8b5a-ded1-4198-850d-2c40a6a8a35b';
-  // El access token se usaría en el backend, no en el frontend por seguridad
-  
-  // Simulación de compra (en producción, esto se haría con la API real de Mercado Pago)
-  const confirmPurchase = confirm(`¿Deseas comprar la plantilla "${project.title}" por $${price} MXN?\n\nEsta es una simulación de compra con Mercado Pago.`);
-  
-  if (confirmPurchase) {
-    alert(`¡Gracias por tu compra!\n\nDetalles:\n- Plantilla: ${project.title}\n- Precio: $${price} MXN\n\nEn un entorno real, serías redirigido a Mercado Pago para completar el pago.`);
-    // Aquí se integraría la redirección a Mercado Pago
+  if (project.category === 'Invitación Digital') {
+    message += ' ¿Podrías darme más información sobre la personalización y el precio?';
+  } else {
+    message += ' ¿Podrías darme más información sobre las funcionalidades y el precio?';
   }
+  
+  const whatsappUrl = `https://wa.me/5214462220020?text=${encodeURIComponent(message)}`;
+  window.open(whatsappUrl, '_blank');
 }
 
 // Event listeners
