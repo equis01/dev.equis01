@@ -2,19 +2,24 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EquisX01 - Desarrollo web</title>
   <style>
-    html, body { margin:0; height:100%; overflow:hidden; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
     iframe {
-      position:fixed;
-      top:0; left:0;
-      width:100%; height:100%;
-      border:none;
+      width: 100%;
+      height: 100vh;
+      border: none;
+      display: block;
     }
   </style>
 </head>
 <body>
-  <iframe src="https://sombiental.com" 
+  <iframe src="https://sombiental.com"
           sandbox="allow-scripts allow-forms allow-same-origin">
   </iframe>
 </body>
